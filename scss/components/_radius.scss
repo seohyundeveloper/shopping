@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+$radiusGroup: (35);
+
+@each $radius in $radiusGroup {
+  .radius-#{$radius} {
+    border-radius: rem($radius);
+  }
+}

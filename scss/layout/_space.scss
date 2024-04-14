@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+$mt: (0, 5, 10, 15);
+$ml: (0, 5, 10, 15);
+$mr: (0, 5, 10, 15);
+$mb: (0, 5, 10, 15);
+$pt: (0, 5, 10, 15);
+$pl: (0, 5, 10, 15);
+$pr: (0, 5, 10, 15);
+$pb: (0, 5, 10, 15);
+
+@layer layout.space {
+  @each $margin in $mt {
+    .mt#{$margin} {
+      margin-top: rem($margin);
+    }
+  }
+  @each $margin in $mr {
+    .mr#{$margin} {
+      margin-right: rem($margin);
+    }
+  }
+  @each $margin in $ml {
+    .ml#{$margin} {
+      margin-left: rem($margin);
+    }
+  }
+  @each $margin in $mb {
+    .mb#{$margin} {
+      margin-bottom: rem($margin);
+    }
+  }
+  @each $padding in $pt {
+    .pt#{$padding} {
+      padding-top: rem($padding);
+    }
+  }
+  @each $padding in $pl {
+    .pl#{$padding} {
+      padding-left: rem($padding);
+    }
+  }
+  @each $padding in $pr {
+    .pr#{$padding} {
+      padding-right: rem($padding);
+    }
+  }
+  @each $padding in $pb {
+    .pb#{$padding} {
+      padding-bottom: rem($padding);
+    }
+  }
+}

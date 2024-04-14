@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.announcement {
+  @include background('ico_notice.svg', right rem(12) bottom rem(12), $grayf8);
+  padding: rem(10) rem(46) rem(10) rem(14);
+  border-radius: rem(12);
+  margin: 0 rem(20) rem(18);
+  p {
+    @include ellipsis(2);
+  }
+}

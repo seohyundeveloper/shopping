@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.btn {
+  display: inline-flex; // 버튼은 안에 붙을수 있어서 inline-flex로!!
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  &.alarm {
+    position: relative; //버튼위에 올라오도록 하기 위해서
+    &::after{
+      @include position(absolute, right, rem(-4), top, rem(-2));
+      content:"";
+      width: rem(14);
+      height: rem(14);
+      background-color: $green;
+      border-radius: 100%;
+      border: rem(2) solid $white;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.btn-more {
+  display: flex;
+  gap: rem(14);
+  align-items: center;
+  color: $gray20;
+  font-family: $english2;
+  font-size: rem(15);
+  font-weight: 700;
+  margin-right: rem(20);
+  &::after {
+    content: "";
+    @include background('ico_notice.svg');
+    width:rem(30);
+    height:rem(30);
+  }
+}
+
+
+@include buttonSize(lg, 60, 22, 44);
+@include buttonSize(md, 50, 22, 44);
+@include buttonSize(base, 40, 16, 27);
+@include buttonSize(sm, 35, 16, 17);
+@include buttonSize(xs, 30, 16, 16);
+
+@include buttonColor(blue, $white, $blue);
+@include buttonColor(pink, $white, $pink);
+@include buttonColor(black, $white, $gray20);
+@include buttonColor(blue2, $blue, $bluee5);
+@include buttonColor(gray, $black, $graye7);
+@include buttonColor("outline-blue", $blue, $white, rem(2), $blue);

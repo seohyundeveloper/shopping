@@ -1,0 +1,10 @@
+@mixin text($map, $index) {
+  #{map-get($map,$index, className)} {
+    font-size: map-get($map, $index, fontSize);
+    color: map-get($map, $index, color);
+    font-weight: map-get($map, $index, fontWeight);
+    line-height: map-get($map, $index, lineHeight);
+    letter-spacing: map-get($map, $index, letterSpacing);
+    margin: map-get($map, $index, margin);
+  }
+}

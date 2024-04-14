@@ -1,0 +1,136 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+@use "./box" as *;
+
+// extend사용하기 위해 지정해준다. 다중클래스를 줄여줄수있다.
+%product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+%productThumb {
+  overflow: hidden;
+  // &:hover {
+  //   img {
+  //     transform: scale(1.5);
+  //   }
+  // }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: 0.3s;
+    li:hover & {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.product-vertical {
+  display: flex;
+  gap: rem(6);
+  padding-left: rem(20);
+  margin-bottom: rem(20);
+  overflow-x: auto;
+  overflow-y: hidden;
+  a {
+    display: block;
+    @extend %productThumb;
+    // overflow: hidden;
+    border-radius: rem(9);
+    width: rem(104);
+    height: rem(175);
+    position: relative;
+    img {
+      // width: 100%;
+      // height: 100%;
+      // object-fit: cover;
+      //transform: scale(1.2);  //원래 이미지가 여백이 있어서 이렇게 처리하기
+      transform-origin: center;
+    }
+    &.video {
+      &::after {
+        @include background('ico_video.svg');
+        @include position(absolute, left, 50%, top, 50%, 10);
+        content: "";
+        width: rem(29);
+        height: rem(29);
+        border-radius: 100%;
+        box-shadow: 0 rem(5) rem(10) 0 rgba(0, 0, 0, 0.10);
+      }
+    }
+  }
+}
+
+.product-list {
+  @extend %product;
+  gap: rem(6);
+  &.scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    img {
+      min-width:rem(150);
+    }
+  }
+  &__thumb {
+    margin-bottom: rem(6);
+    img {
+      width:100%;
+      height:100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+  &__price {  
+    padding-top: rem(1);
+    font-family: $english2;
+  }
+}
+.only-product{
+  @extend %product;
+  gap: rem(6) rem(4);
+}
+
+.product-like {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: rem(6);
+  li {
+    @extend .box-white;
+  }
+  a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__thumb {
+    grid-column: 1/3;
+    @extend %productThumb;
+    // overflow: hidden;
+    border-radius: rem(5);
+    margin-bottom: rem(7);
+    img {
+      // width: 100%;
+      // height: 100%;
+      // object-fit: cover;
+      aspect-ratio: 1/1.2;
+    }
+  }
+  &__count {
+    display: flex;
+    align-items: center;
+    gap: rem(1.2);
+    font-family: $english2;
+    &::after {
+      @include background("ico_like.svg", null, null, contain);
+      content: '';
+      width: rem(10);
+      height: rem(10);
+    }
+  }
+  &__state {
+    justify-self: end;
+    align-self: center;
+  }
+}

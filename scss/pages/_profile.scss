@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.my-order-list{
+  display: flex;
+  gap: rem(8);
+  margin: 0 rem(20) rem(28);
+  overflow-x: auto;
+  overflow-y: hidden;
+}

@@ -1,0 +1,139 @@
+@use "sass:list";
+@use "../abstracts" as *;
+
+$textType: (
+  1: (
+    "className": ".heading.xl",
+    "fontSize": rem(50),
+    "color": $black,
+    "fontWeight": 900,
+    "lineHeight": rem(31),
+    "letterSpacing": null,
+  ),
+  2: (
+    "className": ".heading.lg",
+    "fontSize": rem(28),
+    "color": $gray20,
+    "fontWeight": 700,
+    "lineHeight": rem(36),
+    "letterSpacing": rem(-0.28),
+    "margin": 0 0 rem(12) rem(20)
+  ),
+  3: (
+    "className": ".heading.md",
+    "fontSize": rem(21),
+    "color": $gray20,
+    "fontWeight": 700,
+    "lineHeight": rem(30),
+    "letterSpacing": rem(-0.21),
+    "margin": 0 rem(20) rem(12)
+  ),
+  4: (
+    "className": ".heading.base",
+    "fontSize": rem(20),
+    "color": $black,
+    "fontWeight": 800,
+    "lineHeight": rem(26),
+    "letterSpacing": rem(-0.2),
+  ),
+  5: (
+    "className": ".heading.sm",
+    "fontSize": rem(17),
+    "color": $gray20,
+    "fontWeight": 700,
+    "lineHeight": rem(21),
+    "letterSpacing": rem(-0.17),
+  ),
+  6: (
+    "className": ".heading.xs",
+    "fontSize": rem(14),
+    "color": $gray20,
+    "fontWeight": 700,
+    "lineHeight": rem(18),
+    "letterSpacing": rem(-0.14),
+  ),
+  7: (
+    "className": ".text.xxl",
+    "fontSize": rem(18),
+    "color": $gray20,
+    "fontWeight": 500,
+    "lineHeight": rem(26),
+    "letterSpacing": rem(-0.18),
+  ),
+  8: (
+    "className": ".text.xl",
+    "fontSize": rem(19),
+    "color": $black,
+    "fontWeight": 300,
+    "lineHeight": rem(27),
+    "letterSpacing": null,
+  ),
+  9: (
+    "className": ".text.lg",
+    "fontSize": rem(16),
+    "color": $black,
+    "fontWeight": 600,
+    "lineHeight": rem(20),
+    "letterSpacing": rem(-0.16),
+  ),
+  10: (
+    "className": ".text.md",
+    "fontSize": rem(18),
+    "color": $gray20,
+    "fontWeight": 500,
+    "lineHeight": rem(26),
+    "letterSpacing": rem(-0.18),
+  ),
+  11: (
+    "className": ".text.base",
+    "fontSize": rem(14),
+    "color": $gray20,
+    "fontWeight": 500,
+    "lineHeight": rem(18),
+    "letterSpacing": rem(-0.14),
+  ),
+  12: (
+    "className": ".text.sm",
+    "fontSize": rem(13),
+    "color": $gray20,
+    "fontWeight": 500,
+    "lineHeight": rem(17),
+    "letterSpacing": rem(-0.13),
+  ),
+  13: (
+    "className": ".text.xs",
+    "fontSize": rem(12),
+    "color": $black,
+    "fontWeight": 400,
+    "lineHeight": rem(16),
+    "letterSpacing": null,
+  ),
+  14: (
+    "className": ".text.xxs",
+    "fontSize": rem(10),
+    "color": $black,
+    "fontWeight": 400,
+    "lineHeight": rem(15),
+    "letterSpacing": null,
+  ),
+  15: (
+    "className": ".text.md2",
+    "fontSize": rem(15),
+    "color": $black,
+    "fontWeight": 700,
+    "lineHeight": rem(19),
+    "letterSpacing": rem(-0.15),
+  ),
+);
+
+$textLength: list.length($textType);
+
+@for $index from 1 through $textLength {
+  @include text($textType, $index);
+}
+
+.heading.md {
+  .align & {
+    margin-bottom: 0;
+  }
+}

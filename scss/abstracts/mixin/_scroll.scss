@@ -1,0 +1,18 @@
+@mixin scroll($direction, $size, $trackColor, $radius: null) {
+  @debug $size;
+  &::-webkit-scrollbar {
+    @if $direction == "right" or $direction == "r" {
+      width: $size;
+    } @else if $direction == "bottom" or $direction == "b" {
+      height: $size;
+    }
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $trackColor;
+    border-radius: $radius;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

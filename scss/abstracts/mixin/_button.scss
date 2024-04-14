@@ -1,0 +1,24 @@
+@use '../function' as *;
+//크기 - 높이 , 글자크기
+//60 50 40 35 30 
+//lg md base sm xs
+//색상 - 배경색 :파랑 핑크 검정 옅은파랑 회색
+//    - 선색 파랑
+//글씨색, 배경색, 선색
+@mixin buttonSize($size, $height, $fontSize, $padding) {
+  .btn.#{$size}{
+    height: rem($height);
+    font-size: rem($fontSize);
+    padding: 0 rem($padding);
+  }
+}
+
+@mixin buttonColor($class, $color, $bgColor, $borderWidth:null, $borderColor:null) {
+  .btn.#{$class} {
+    color: $color;
+    background-color: $bgColor;
+    @if  ($borderWidth != null) {
+      border: rem(2) solid $borderColor
+    } 
+  }
+}

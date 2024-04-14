@@ -1,0 +1,8 @@
+$imgUrl: "../images/";
+
+@mixin background($image, $coordinate: null, $color: null, $size: null) {
+  // $imgUrl: "/images/"; //배포용
+
+  background: url(#{$imgUrl}#{$image}) no-repeat $coordinate $color;
+  background-size: $size;
+}
