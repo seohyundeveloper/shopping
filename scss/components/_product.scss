@@ -66,6 +66,7 @@
 .product-list {
   @extend %product;
   gap: rem(6);
+  margin: rem(10) 0 rem(25) rem(20);
   &.scroll {
     display: flex;
     overflow-x: auto;
@@ -97,6 +98,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: rem(6);
+  margin: rem(15) 0 rem(27) rem(20);
   li {
     @extend .box-white;
   }

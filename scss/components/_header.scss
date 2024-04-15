@@ -1,39 +1,12 @@
 @use "../abstracts/" as *;
 
-.header{
+.top-menu{
   margin: rem(20);
-}
-.bg-img {
-  gap: rem(11);
-  a {
-    display: block;
-    border-radius: 100%;
-    width:rem(35);
-    height:rem(35);
-    &.voucher {
-      @include background('ico_voucher.svg', center, $grayf8);
-    }
-    &.comment {
-      @include background('ico_comment.svg', center, $grayf8);
-    }
-    &.setting {
-      @include background('ico_setting.svg', center, $grayf8);
-    }
-    &.alarm {
-      position: relative; //버튼위에 올라오도록 하기 위해서
-      &::after{
-        @include position(absolute, right, 0);
-        content:"";
-        width: rem(8);
-        height: rem(8);
-        background-color: $blue;
-        border-radius: 100%;
-        border: rem(1) solid $white;
-        box-sizing: border-box;
-      }
-    }
+  .bg-img {
+    gap: rem(11);
   }
-}
-.avatar{
-  gap:rem(14);
+  
+  .avatar{
+    gap:rem(14);
+  }
 }

@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.gnb-list{
+  @include position(fixed, bottom, 0);
+  width: 100%;
+  min-height: rem(84);
+  display: flex;
+  justify-content: center;
+  gap: rem(53);
+  background-color: $white;
+}

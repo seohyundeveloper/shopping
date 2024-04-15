@@ -572,6 +572,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 
 .product-list {
   gap: 0.6rem;
+  margin: 1rem 0 2.5rem 2rem;
 }
 
 .product-list.scroll {
@@ -608,6 +609,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.6rem;
+  margin: 1.5rem 0 2.7rem 2rem;
 }
 
 .product-like a {
@@ -767,6 +769,20 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   margin-bottom: 0;
 }
 
+.btn-setting, .btn-comment, .btn-voucher {
+  display: block;
+  border-radius: 100%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.btn-my, .btn-bags, .btn-categories, .btn-wishlist, .btn-home {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 3.1rem;
+  margin-top: 1.4rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -809,6 +825,55 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   background: url(../images/ico_notice.svg) no-repeat;
   width: 3rem;
   height: 3rem;
+}
+
+.btn-voucher {
+  background: url(../images/ico_voucher.svg) no-repeat center #f8f8f8;
+}
+
+.btn-comment {
+  background: url(../images/ico_comment.svg) no-repeat center #f8f8f8;
+}
+
+.btn-comment.alarm {
+  position: relative;
+}
+
+.btn-comment.alarm::after {
+  position: absolute;
+  right: 0;
+  z-index: var(--zindex, 1);
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #004cff;
+  border-radius: 100%;
+  border: 0.1rem solid #ffffff;
+  box-sizing: border-box;
+}
+
+.btn-setting {
+  background: url(../images/ico_setting.svg) no-repeat center #f8f8f8;
+}
+
+.btn-home {
+  background: url(../images/ico_home.svg) no-repeat center;
+}
+
+.btn-wishlist {
+  background: url(../images/ico_wishlist.svg) no-repeat center;
+}
+
+.btn-categories {
+  background: url(../images/ico_categories.svg) no-repeat center;
+}
+
+.btn-bags {
+  background: url(../images/ico_bags.svg) no-repeat center;
+}
+
+.btn-my {
+  background: url(../images/ico_my.svg) no-repeat bottom;
 }
 
 .btn.lg {
@@ -936,52 +1001,32 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   border-radius: 3.5rem;
 }
 
-.header {
+.top-menu {
   margin: 2rem;
 }
 
-.bg-img {
+.top-menu .bg-img {
   gap: 1.1rem;
 }
 
-.bg-img a {
-  display: block;
-  border-radius: 100%;
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.bg-img a.voucher {
-  background: url(../images/ico_voucher.svg) no-repeat center #f8f8f8;
-}
-
-.bg-img a.comment {
-  background: url(../images/ico_comment.svg) no-repeat center #f8f8f8;
-}
-
-.bg-img a.setting {
-  background: url(../images/ico_setting.svg) no-repeat center #f8f8f8;
-}
-
-.bg-img a.alarm {
-  position: relative;
-}
-
-.bg-img a.alarm::after {
-  position: absolute;
-  right: 0;
-  z-index: var(--zindex, 1);
-  content: "";
-  width: 0.8rem;
-  height: 0.8rem;
-  background-color: #004cff;
-  border-radius: 100%;
-  border: 0.2rem solid #ffffff;
-  box-sizing: border-box;
-}
-
-.avatar {
+.top-menu .avatar {
   gap: 1.4rem;
+}
+
+.gnb-list {
+  position: fixed;
+  bottom: 0;
+  z-index: var(--zindex, 1);
+  width: 100%;
+  min-height: 8.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 5.3rem;
+  background-color: #ffffff;
+}
+
+main {
+  margin-bottom: 9rem;
 }
 
 .my-order-list {
