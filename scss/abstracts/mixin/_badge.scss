@@ -1,0 +1,13 @@
+@use '../function' as *;
+
+// 색상, 글씨, 이미지
+// 크기 (높이)
+// 20, 18
+
+@mixin badge($class, $color, $height) {
+  .badge.#{$class} {
+    background-color: $color;
+    box-sizing: border-box;
+    height: $height;
+  }
+}

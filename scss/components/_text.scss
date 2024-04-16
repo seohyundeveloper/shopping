@@ -132,6 +132,14 @@ $textType: (
     "lineHeight": rem(21),
     "letterSpacing": rem(-0.15),
   ),
+  17: (
+    "className": ".text.xs3",
+    "fontSize": rem(13),
+    "color": $white,
+    "fontWeight": 600,
+    "lineHeight": rem(18),
+    "letterSpacing": rem(-0.14),
+  ),
 );
 
 $textLength: list.length($textType);

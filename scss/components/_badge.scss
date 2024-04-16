@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+%badge-common {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: rem(4) rem(8);
+  border-radius: rem(4);
+  font-family: $english2;
+}
+
+
+.badge {
+  @extend %badge-common;
+}
+
+@include badge(green, $green, rem(20));
+@include badge(pink, $pink, rem(20));

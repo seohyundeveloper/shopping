@@ -815,6 +815,14 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   letter-spacing: -0.015rem;
 }
 
+.text.xs3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.8rem;
+  letter-spacing: -0.014rem;
+}
+
 .align .heading.md {
   margin-bottom: 0;
 }
@@ -1073,6 +1081,28 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   justify-content: center;
   gap: 5.3rem;
   background-color: #ffffff;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.badge.green {
+  background-color: #08c514;
+  box-sizing: border-box;
+  height: 2rem;
+}
+
+.badge.pink {
+  background-color: #ff5790;
+  box-sizing: border-box;
+  height: 2rem;
 }
 
 main {
