@@ -688,6 +688,28 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   font-family: "Raleway", sans-serif;
 }
 
+.product-sale {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem 0.4rem;
+  margin: 1rem 2rem 0;
+}
+
+.product-sale a {
+  position: relative;
+}
+
+.product-sale a img {
+  border-radius: 0.6rem;
+}
+
+.product-sale .sales {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  z-index: var(--zindex, 1);
+}
+
 .heading.xl {
   font-size: 5rem;
   color: #000000;
@@ -1090,6 +1112,31 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;
   font-family: "Raleway", sans-serif;
+}
+
+.badge.no-radius {
+  border-bottom-right-radius: 0;
+}
+
+.clock-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.04rem;
+  margin-right: 2rem;
+}
+
+.clock-badge__number {
+  font-family: "Raleway", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.clock-badge__number > span {
+  padding: 0.3rem 0.5rem;
+  background-color: #ffebeb;
+  border-radius: 0.7rem;
+  box-sizing: border-box;
 }
 
 .badge.green {
