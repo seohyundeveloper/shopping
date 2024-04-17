@@ -657,8 +657,6 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 .product-categories > li {
   display: flex;
   flex-direction: column;
-  width: 16.5rem;
-  height: 19.2rem;
   background-color: #ffffff;
   border-radius: 0.9rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
@@ -682,6 +680,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   align-self: center;
   justify-self: center;
   border-radius: 0.6rem;
+  aspect-ratio: 1/1;
 }
 
 .product-categories__text {
