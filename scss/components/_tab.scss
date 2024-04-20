@@ -1,0 +1,36 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.tab-type1 {
+  display: flex;
+  li {
+    flex: 1;
+    position: relative;
+  }
+  button {
+    width: 100%;
+    background-color: $grayf9;
+  }
+  .--active {
+    button {
+      @include position(absolute, left, 50%, top, 50%);
+      color: $blue;
+      font-family: $english2;
+      font-size: rem(16);
+      font-weight: 800;
+      letter-spacing: rem(0.192);
+      height: rem(40);
+      border-radius: rem(17);
+      border: rem(2) solid $blue;
+      box-shadow: 0 rem(5) rem(10) 0 rgba(0, 0, 0, 0.16);
+      background-color: $white;
+      &::after {
+        @include position(absolute, left, 50%, top, 0);
+        content:"";
+        border-width: rem(9);
+        border-style: solid;
+        border-color: $blue transparent transparent transparent;
+      }
+    }
+  }
+}

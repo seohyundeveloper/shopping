@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="./js/common.js" defer></script>
   <title>스타일가이드</title>
 </head>
 <body>
@@ -227,6 +228,58 @@
   <input type="password" class="input base" placeholder="password" />
   <input type="password" class="input base blue" placeholder="password" />
   <br />
-  <textarea></textarea>
+  <br />
+  <textarea class="input blue rounded-base" rows="4"></textarea>
+  <textarea class="input blue rounded-base sm" style="--height: 10rem"></textarea>
+  <br />
+  <h3>input radio</h3>
+  <input type="radio" class="radio" name="radio_group" id="radio1_1" checked /><label for="radio1_1">SMS</label>
+  <input type="radio" class="radio" name="radio_group" id="radio1_2" /><label for="radio1_2">Email</label>
+  <br / >
+  <div class="phone">
+    <button>깃발</button>
+    <ul class="phone__list">
+      <li><button>깃발1</button></li>
+      <li><button>깃발2</button></li>
+      <li><button>깃발3</button></li>
+    </ul>
+    <input type="tel" name="" id="" />
+  </div>
+  <h3>Dialog</h3>
+  <button class="open-alert">경고창열기</button>
+  <dialog class="dialog alert">
+    <button class="close-btn">X</button>
+    <strong>We couldn't proceed your payment</strong>
+    <p>Please, change your payment method or try again</p>
+  </dialog>
+  <nav>
+    <ul class="tab-type1">
+      <li><button>All</button></li>
+      <li><button>10%</button></li>
+      <li class="--active"><button>20%</button></li>
+      <li><button>30%</button></li>
+      <li><button>40%</button></li>
+      <li><button>50%</button></li>
+    </ul>
+  </nav>
+  <div class="tab-content" data-tab-content="sales">
+    <div>All내용</div>
+    <div>10%내용</div>
+    <div>20%내용</div>
+    <div>30%내용</div>
+    <div>40%내용</div>
+  </div>
+  <br />
+  <div class="gallery-box">
+    <div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    Watch
+  </div>
+  <hr />
+  <input type="checkbox" class="toggle" id="chk1_1" /><label for="chk1_1"></label>
 </body>
 </html>

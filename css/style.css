@@ -1156,7 +1156,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   height: 2rem;
 }
 
-.input {
+.phone, .input {
   width: 100%;
   padding: 0 1.9rem;
   box-sizing: border-box;
@@ -1169,22 +1169,22 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 }
 
 .input.sm {
-  height: 3rem;
+  height: var(--height, 3rem);
   border-radius: 3rem;
 }
 
 .input.base {
-  height: 3.6rem;
+  height: var(--height, 3.6rem);
   border-radius: 3.6rem;
 }
 
 .input.md {
-  height: 5rem;
+  height: var(--height, 5rem);
   border-radius: 5rem;
 }
 
 .input.lg {
-  height: 5.5rem;
+  height: var(--height, 5.5rem);
   border-radius: 5.5rem;
 }
 
@@ -1208,8 +1208,279 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   color: #d2d2d2;
 }
 
+.radio {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.radio + label {
+  background: url(../images/bg_radio_off.svg) no-repeat right 0.8rem center #ffebeb;
+  background-size: 2.6rem auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 4.2rem;
+  box-sizing: border-box;
+  height: 4rem;
+  border-radius: 4rem;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.015rem;
+}
+
+.radio:checked + label {
+  background: url(../images/bg_radio_on.svg) no-repeat right 0.8rem center #e5ebfc;
+  background-size: 2.6rem auto;
+  color: #004cff;
+  font-weight: 700;
+}
+
+.radio:focus + label {
+  outline: 0.2rem solid rgba(0, 0, 0, 0.2);
+  outline-offset: 0.3rem;
+}
+
+.phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #e5ebfc;
+  height: 5.5rem;
+  border-radius: 5.5rem;
+}
+
+.phone > button {
+  width: 4.7rem;
+}
+
+.phone input {
+  flex: 1;
+  border: none;
+  border-left: 1px solid #1f1f1f;
+  height: 2.3rem;
+  background-color: transparent;
+}
+
+.phone__list {
+  position: absolute;
+  top: 3.5rem;
+  left: 3rem;
+  display: none;
+}
+
+.phone__list.--active {
+  display: block;
+}
+
+.dialog.confirm, .dialog.alert {
+  padding-top: 5.7rem;
+  overflow: visible;
+}
+
+.dialog.confirm::before, .dialog.alert::before {
+  position: absolute;
+  left: 50%;
+  top: -4rem;
+  z-index: var(--zindex, 1);
+  transform: translateX(-50%);
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  filter: drop-shadow(0 0.3rem 0.8rem rgba(0, 0, 0, 0.16));
+  background-color: #ffffff;
+}
+
+.dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: var(--zindex, 1000);
+  transform: translate(-50%, -50%);
+  padding: 2.5rem 2rem;
+  border-radius: 1.9rem;
+}
+
+.dialog[open] {
+  animation: dialogUp 1 2s both;
+}
+
+.dialog[open]::backdrop {
+  animation: backdropFadeIn 1 0.5s 0.5s both;
+}
+
+.dialog.alert::before {
+  background: url(../images/ico_alert.svg) no-repeat center #ffffff;
+  background-size: 5rem;
+}
+
+.dialog.confirm::before {
+  background: url(../images/ico_confirm.svg) no-repeat center #ffffff;
+  background-size: 5rem;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2px);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+@keyframes backdropFadeIn {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes dialogUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes dialogUpDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
+.tab-type1 {
+  display: flex;
+}
+
+.tab-type1 li {
+  flex: 1;
+  position: relative;
+}
+
+.tab-type1 button {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.tab-type1 .--active button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: var(--zindex, 1);
+  transform: translate(-50%, -50%);
+  color: #004cff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.0192rem;
+  height: 4rem;
+  border-radius: 1.7rem;
+  border: 0.2rem solid #004cff;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+.tab-type1 .--active button::after {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: var(--zindex, 1);
+  transform: translateX(-50%);
+  content: "";
+  border-width: 0.9rem;
+  border-style: solid;
+  border-color: #004cff transparent transparent transparent;
+}
+
 main {
   margin-bottom: 9rem;
+}
+
+.gallery-box {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.gallery-box > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery-box > div > div {
+  background: pink;
+  border-radius: 9px;
+  height: 100px;
+}
+
+.gallery-box:hover {
+  color: blue;
+  font-size: 20px;
+}
+
+.gallery-box:hover .item:hover {
+  background-color: orange;
+  font-size: 30px;
+  color: red;
+}
+
+.toggle {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.toggle + label {
+  position: relative;
+  display: flex;
+  height: 50px;
+  border-radius: 50px;
+  background-color: violet;
+}
+
+.toggle + label::before {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  z-index: var(--zindex, 1);
+  transform: translateY(-50%);
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.toggle:checked + label::before {
+  left: calc(100% - 40px);
+  background-color: yellow;
+  width: 30px;
+  height: 30px;
 }
 
 .my-order-list {

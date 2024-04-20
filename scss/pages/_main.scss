@@ -5,3 +5,55 @@
 main {
   margin-bottom: rem(90);
 }
+
+.gallery-box {
+  border: 2px solid red;
+  padding: 10px;
+  > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    > div {
+      background: pink;
+      border-radius: 9px;
+      height: 100px;
+    }
+  }
+  &:hover {
+    color: blue;
+    font-size: 20px;
+    .item:hover {
+      background-color: orange;
+      font-size: 30px;
+      color: red;
+    }
+  }
+}
+
+.toggle {
+  @include a11y-hidden;
+  + label {
+    position: relative;
+    display: flex;
+    height: 50px;
+    border-radius: 50px;
+    background-color: violet;
+    &::before {
+      @include position(a, left, 10px, top, 50%);
+      content: "";
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      border-radius: 100%;
+      transition: 0.5s;
+    }
+  }
+  &:checked + label {
+    &::before {
+      left: calc(100% - 40px);
+      background-color: yellow;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use '../base/' as *;
 //36/9,30/7,50/9,55 4가지 높이 
 //회색 파랑
 // 9,7 radius값들
@@ -11,7 +12,10 @@
 }
 
 @mixin inputSize($size, $rounded:$size) {
-  height: rem($size);
+  //var(지정값,기본값)
+  //css 기법
+
+  height: var(--height, rem($size));
   border-radius: rem($rounded);
 }
 
@@ -44,6 +48,70 @@
   }
   &::placeholder {
     color: $grayd2;
+  }
+}
+ //textarea 모양이 input과 동일해서 그냥 사용
+
+.radio {
+  @include a11y-hidden;
+  + label {
+    @include background('bg_radio_off.svg', right rem(8) center, $pinkff, rem(26) auto);
+    //모바일이어서 이미지 사이즈를 넣어주는게 좋다. (auto 넣어주면 비례해서 나온다.)
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 rem(42);
+    box-sizing: border-box;
+    height: rem(40);
+    border-radius: rem(40);
+    color: $black;
+    font-family: $english2;
+    font-size: rem(15);
+    font-weight: 500;
+    letter-spacing: rem(-0.15);
+  }
+  &:checked {
+    + label {
+      @include background('bg_radio_on.svg', right rem(8) center, $bluee5, rem(26) auto);
+      color: $blue;
+      font-weight: 700;
+    }
+  }
+  &:focus {
+    + label {
+      outline: rem(2) solid rgba($black, 0.2);
+      outline-offset: rem(3);
+    }
+  }
+}
+
+.phone {
+  @extend %inputBase;
+  position:relative;
+  display: flex;
+  align-items: center;
+  background: $bluee5;
+  height: rem(55);
+  border-radius: rem(55);
+  > button {
+    width:rem(47);
+  }
+  input {
+    flex: 1;
+    border:none;
+    border-left: 1px solid #1f1f1f;
+    height: rem(23);
+    background-color: transparent;
+  }
+  &__list {
+    position:absolute;
+    top: rem(35);
+    left: rem(30);
+    display: none;
+    &.--active {
+      display: block;
+    }
   }
 }
 

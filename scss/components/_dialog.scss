@@ -1,0 +1,91 @@
+@use "../abstracts/" as *;
+
+%dialogIcon {
+  padding-top: rem(57);
+  overflow: visible;
+  &::before {
+    @include position(absolute, left, 50%, top, rem(-40));
+    content: "";
+    width: rem(80);
+    height: rem(80);
+    border-radius: 100%;
+    filter: drop-shadow(0 rem(3) rem(8) rgba(0, 0, 0, 0.16));
+    background-color: $white;
+  }
+}
+
+.dialog {
+  @include position(fixed, left, 50%, top, 50%, 1000);  //마지막은  z-index값 의미
+  padding: rem(25) rem(20);
+  border-radius: rem(19);
+  &[open] {
+    animation:dialogUp 1 2s both;
+    &::backdrop {
+      animation: backdropFadeIn 1 0.5s 0.5s both;
+    }  // 모달 오픈시 배경화면 천천히 흐려지게 하기
+  }
+  &.alert {
+    @extend %dialogIcon;
+    &::before {
+      @include background("ico_alert.svg", center, $white, rem(50));
+    }
+  }
+  &.confirm {
+    @extend %dialogIcon;
+    &::before {
+      @include background("ico_confirm.svg", center, $white, rem(50));
+    }
+  } 
+  // &::backdrop {
+  //   //뒷배경 blur처리
+  //   // background-color: rgba($black, 0.7);
+  //   background-color: rgba($white, 0.5);
+  //   backdrop-filter: blur(2px);
+  // }
+  &::backdrop {
+    background-color: rgba($black, 0);
+    backdrop-filter: blur(2px);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: rem(15);
+  right: rem(15);
+}
+
+@keyframes backdropFadeIn {
+  0% {
+    background-color: rgba($black, 0);
+  }
+  100% {
+    background-color: rgba($black, 0.5);
+  }
+}
+
+// 모달이 나오는 경우
+@keyframes dialogUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+//모달이 나왔다 사라지는 경우
+@keyframes dialogUpDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
