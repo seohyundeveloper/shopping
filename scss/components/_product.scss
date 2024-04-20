@@ -5,7 +5,13 @@
 // extend사용하기 위해 지정해준다. 다중클래스를 줄여줄수있다.
 %product {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(10rem,auto));
+  // @include tablet {
+  //   grid-template-columns: repeat(4, 1fr);
+  // }
+  // @include mobile {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 }
 
 %productThumb {
@@ -189,7 +195,11 @@
     @include position(absolute, right, rem(5), top, rem(5));
   }
 }
+.heading + .star {
+  margin-left: rem(-7);
+}
 
-.stars {
-  @include background("ico_stars.svg", right 60%, top);
+.product-you {
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem,auto));
+  margin-right: rem(20);
 }

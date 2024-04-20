@@ -516,7 +516,7 @@ body {
 
 .only-product, .product-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
 }
 
 .product-like__thumb, .product-vertical a {
@@ -711,8 +711,13 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   z-index: var(--zindex, 1);
 }
 
-.stars {
-  background: url(../images/ico_stars.svg) no-repeat right 60% top;
+.heading + .star {
+  margin-left: -0.7rem;
+}
+
+.product-you {
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, auto));
+  margin-right: 2rem;
 }
 
 .heading.xl {
@@ -1085,22 +1090,22 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   border-radius: 3.5rem;
 }
 
-.top-menu {
+.profile-header {
   margin: 2rem;
 }
 
-.top-menu .bg-img {
+.profile-header .bg-img {
   gap: 1.1rem;
 }
 
-.top-menu .avatar {
+.profile-header .avatar {
   gap: 1.4rem;
 }
 
 .gnb-list {
   position: fixed;
   bottom: 0;
-  z-index: var(--zindex, 1);
+  z-index: var(--zindex, 3);
   width: 100%;
   min-height: 8.4rem;
   display: flex;

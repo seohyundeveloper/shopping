@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .gnb-list{
-  @include position(fixed, bottom, 0);
+  @include position(fixed, bottom, 0, null, null, 3);
   width: 100%;
   min-height: rem(84);
   display: flex;
