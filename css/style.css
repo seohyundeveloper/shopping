@@ -697,6 +697,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 
 .product-sale a {
   position: relative;
+  display: block;
 }
 
 .product-sale a img {
@@ -708,6 +709,10 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   right: 0.5rem;
   top: 0.5rem;
   z-index: var(--zindex, 1);
+}
+
+.stars {
+  background: url(../images/ico_stars.svg) no-repeat right 60% top;
 }
 
 .heading.xl {
@@ -1149,6 +1154,58 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   background-color: #ff5790;
   box-sizing: border-box;
   height: 2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0 1.9rem;
+  box-sizing: border-box;
+  border: none;
+  color: #000000;
+}
+
+.input {
+  background: #f8f8f8;
+}
+
+.input.sm {
+  height: 3rem;
+  border-radius: 3rem;
+}
+
+.input.base {
+  height: 3.6rem;
+  border-radius: 3.6rem;
+}
+
+.input.md {
+  height: 5rem;
+  border-radius: 5rem;
+}
+
+.input.lg {
+  height: 5.5rem;
+  border-radius: 5.5rem;
+}
+
+.input.rounded-sm {
+  border-radius: 0.7rem;
+}
+
+.input.rounded-base {
+  border-radius: 0.9rem;
+}
+
+.input.blue {
+  background-color: #e5ebfc;
+}
+
+.input.blue::placeholder {
+  color: #9EB4E8;
+}
+
+.input::placeholder {
+  color: #d2d2d2;
 }
 
 main {

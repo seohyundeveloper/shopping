@@ -56,6 +56,7 @@
   @extend %common;
   @include background('ico_voucher.svg', center, $grayf8);
 }
+
 .btn-comment {
   @extend %common;
   @include background('ico_comment.svg', center, $grayf8);
