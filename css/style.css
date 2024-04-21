@@ -865,7 +865,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   height: 3.5rem;
 }
 
-.btn-my, .btn-bags, .btn-categories, .btn-wishlist, .btn-home {
+.gnb5, .gnb4, .gnb3, .gnb2, .gnb1 {
   display: inline-flex;
   width: 2.5rem;
   height: 3.1rem;
@@ -945,24 +945,44 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   background: url(../images/ico_setting.svg) no-repeat center #f8f8f8;
 }
 
-.btn-home {
-  background: url(../images/ico_home.svg) no-repeat center;
+.gnb1 {
+  background: url(../images/ico_gnb1.svg) no-repeat center;
 }
 
-.btn-wishlist {
-  background: url(../images/ico_wishlist.svg) no-repeat center;
+.gnb1.--active {
+  background: url(../images/ico_gnb1_active.svg) no-repeat center;
 }
 
-.btn-categories {
-  background: url(../images/ico_categories.svg) no-repeat center;
+.gnb2 {
+  background: url(../images/ico_gnb2.svg) no-repeat center;
 }
 
-.btn-bags {
-  background: url(../images/ico_bags.svg) no-repeat center;
+.gnb2.--active {
+  background: url(../images/ico_gnb2_active.svg) no-repeat center;
 }
 
-.btn-my {
-  background: url(../images/ico_my.svg) no-repeat bottom;
+.gnb3 {
+  background: url(../images/ico_gnb3.svg) no-repeat center;
+}
+
+.gnb3.--active {
+  background: url(../images/ico_gnb3_active.svg) no-repeat center;
+}
+
+.gnb4 {
+  background: url(../images/ico_gnb4.svg) no-repeat center;
+}
+
+.gnb4.--active {
+  background: url(../images/ico_gnb4_active.svg) no-repeat center;
+}
+
+.gnb5 {
+  background: url(../images/ico_gnb5.svg) no-repeat center;
+}
+
+.gnb5.--active {
+  background: url(../images/ico_gnb5_active.svg) no-repeat center;
 }
 
 .btn.lg {

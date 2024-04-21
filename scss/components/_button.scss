@@ -79,30 +79,15 @@
   @include background('ico_setting.svg', center, $grayf8);
 }
 
-
-.btn-home {
-  @extend %gnb-common;
-  @include background('ico_home.svg', center);
-}
-
-.btn-wishlist{
-  @extend %gnb-common;
-  @include background('ico_wishlist.svg', center);
-}
-
-.btn-categories{
-  @extend %gnb-common;
-  @include background('ico_categories.svg', center);
-}
-
-.btn-bags{
-  @extend %gnb-common;
-  @include background('ico_bags.svg', center);
-}
-
-.btn-my {
-  @extend %gnb-common;
-  @include background('ico_my.svg', bottom);
+//gnbList Icon 
+@for $index from 1 through 5 {
+  .gnb#{$index} {
+    @extend %gnb-common;
+    @include background('ico_gnb#{$index}.svg', center);
+    &.--active {
+      @include background('ico_gnb#{$index}_active.svg', center);
+    }
+  }
 }
 
 @include buttonSize(lg, 60, 22, 44);
