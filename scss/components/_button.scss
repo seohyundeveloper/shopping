@@ -8,12 +8,6 @@
   height:rem(35);
 }
 
-%gnb-common {
-  display: inline-flex;
-  width: rem(25);
-  height: rem(31);
-  margin-top: rem(14);
-}
 .btn {
   display: inline-flex; // 버튼은 안에 붙을수 있어서 inline-flex로!!
   align-items: center;
@@ -77,17 +71,6 @@
 .btn-setting {
   @extend %common;
   @include background('ico_setting.svg', center, $grayf8);
-}
-
-//gnbList Icon 
-@for $index from 1 through 5 {
-  .gnb#{$index} {
-    @extend %gnb-common;
-    @include background('ico_gnb#{$index}.svg', center);
-    &.--active {
-      @include background('ico_gnb#{$index}_active.svg', center);
-    }
-  }
 }
 
 @include buttonSize(lg, 60, 22, 44);

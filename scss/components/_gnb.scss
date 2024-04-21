@@ -1,13 +1,44 @@
 @use "../abstracts/" as *;
 
+%gnb-common {
+  display: inline-flex;
+  width: rem(25);
+  height: rem(31);
+  margin-top: rem(14);
+}
+
 .gnb-list{
   @include position(fixed, bottom, 0, null, null, 3);
   width: 100%;
   min-height: rem(84);
   display: flex;
-  justify-content: center;
-  gap: rem(53);
   background-color: $white;
-  // .--active {
-  // }
+  padding: 0 rem(24);
+  box-sizing: border-box;
+  gap: rem(53);
+}
+
+//gnbList Icon 
+@for $index from 1 through 5 {
+  .gnb#{$index} {
+    @extend %gnb-common;
+    @include background('ico_gnb#{$index}.svg', center);
+    &.--active {
+      @include background('ico_gnb#{$index}_active.svg', center);
+      margin-top: rem(16);
+    }
+    &.alarm {
+      position: relative; //버튼위에 올라오도록 하기 위해서
+      &::after{
+        @include position(absolute, right, 0);
+        content:"";
+        width: rem(8);
+        height: rem(8);
+        background-color: $blue;
+        border-radius: 100%;
+        border: rem(2) solid $white;
+        box-sizing: border-box;
+      }
+    }
+  }
 }

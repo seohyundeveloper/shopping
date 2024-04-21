@@ -865,13 +865,6 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   height: 3.5rem;
 }
 
-.gnb5, .gnb4, .gnb3, .gnb2, .gnb1 {
-  display: inline-flex;
-  width: 2.5rem;
-  height: 3.1rem;
-  margin-top: 1.4rem;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -943,46 +936,6 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 
 .btn-setting {
   background: url(../images/ico_setting.svg) no-repeat center #f8f8f8;
-}
-
-.gnb1 {
-  background: url(../images/ico_gnb1.svg) no-repeat center;
-}
-
-.gnb1.--active {
-  background: url(../images/ico_gnb1_active.svg) no-repeat center;
-}
-
-.gnb2 {
-  background: url(../images/ico_gnb2.svg) no-repeat center;
-}
-
-.gnb2.--active {
-  background: url(../images/ico_gnb2_active.svg) no-repeat center;
-}
-
-.gnb3 {
-  background: url(../images/ico_gnb3.svg) no-repeat center;
-}
-
-.gnb3.--active {
-  background: url(../images/ico_gnb3_active.svg) no-repeat center;
-}
-
-.gnb4 {
-  background: url(../images/ico_gnb4.svg) no-repeat center;
-}
-
-.gnb4.--active {
-  background: url(../images/ico_gnb4_active.svg) no-repeat center;
-}
-
-.gnb5 {
-  background: url(../images/ico_gnb5.svg) no-repeat center;
-}
-
-.gnb5.--active {
-  background: url(../images/ico_gnb5_active.svg) no-repeat center;
 }
 
 .btn.lg {
@@ -1122,6 +1075,13 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   gap: 1.4rem;
 }
 
+.gnb5, .gnb4, .gnb3, .gnb2, .gnb1 {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 3.1rem;
+  margin-top: 1.4rem;
+}
+
 .gnb-list {
   position: fixed;
   bottom: 0;
@@ -1129,9 +1089,140 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   width: 100%;
   min-height: 8.4rem;
   display: flex;
-  justify-content: center;
-  gap: 5.3rem;
   background-color: #ffffff;
+  padding: 0 2.4rem;
+  box-sizing: border-box;
+  gap: 5.3rem;
+}
+
+.gnb1 {
+  background: url(../images/ico_gnb1.svg) no-repeat center;
+}
+
+.gnb1.--active {
+  background: url(../images/ico_gnb1_active.svg) no-repeat center;
+  margin-top: 1.6rem;
+}
+
+.gnb1.alarm {
+  position: relative;
+}
+
+.gnb1.alarm::after {
+  position: absolute;
+  right: 0;
+  z-index: var(--zindex, 1);
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #004cff;
+  border-radius: 100%;
+  border: 0.2rem solid #ffffff;
+  box-sizing: border-box;
+}
+
+.gnb2 {
+  background: url(../images/ico_gnb2.svg) no-repeat center;
+}
+
+.gnb2.--active {
+  background: url(../images/ico_gnb2_active.svg) no-repeat center;
+  margin-top: 1.6rem;
+}
+
+.gnb2.alarm {
+  position: relative;
+}
+
+.gnb2.alarm::after {
+  position: absolute;
+  right: 0;
+  z-index: var(--zindex, 1);
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #004cff;
+  border-radius: 100%;
+  border: 0.2rem solid #ffffff;
+  box-sizing: border-box;
+}
+
+.gnb3 {
+  background: url(../images/ico_gnb3.svg) no-repeat center;
+}
+
+.gnb3.--active {
+  background: url(../images/ico_gnb3_active.svg) no-repeat center;
+  margin-top: 1.6rem;
+}
+
+.gnb3.alarm {
+  position: relative;
+}
+
+.gnb3.alarm::after {
+  position: absolute;
+  right: 0;
+  z-index: var(--zindex, 1);
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #004cff;
+  border-radius: 100%;
+  border: 0.2rem solid #ffffff;
+  box-sizing: border-box;
+}
+
+.gnb4 {
+  background: url(../images/ico_gnb4.svg) no-repeat center;
+}
+
+.gnb4.--active {
+  background: url(../images/ico_gnb4_active.svg) no-repeat center;
+  margin-top: 1.6rem;
+}
+
+.gnb4.alarm {
+  position: relative;
+}
+
+.gnb4.alarm::after {
+  position: absolute;
+  right: 0;
+  z-index: var(--zindex, 1);
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #004cff;
+  border-radius: 100%;
+  border: 0.2rem solid #ffffff;
+  box-sizing: border-box;
+}
+
+.gnb5 {
+  background: url(../images/ico_gnb5.svg) no-repeat center;
+}
+
+.gnb5.--active {
+  background: url(../images/ico_gnb5_active.svg) no-repeat center;
+  margin-top: 1.6rem;
+}
+
+.gnb5.alarm {
+  position: relative;
+}
+
+.gnb5.alarm::after {
+  position: absolute;
+  right: 0;
+  z-index: var(--zindex, 1);
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #004cff;
+  border-radius: 100%;
+  border: 0.2rem solid #ffffff;
+  box-sizing: border-box;
 }
 
 .badge {
