@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.start-bg {
+  @include background('logo_bags.svg', center);
+  width: rem(134);
+  height: rem(134);
+  border-radius: 100%;
+  background-color: $white;
+  filter: drop-shadow(0 rem(3) rem(8) rgba(0, 0, 0, 0.16));
+}
+.start-text{
+  &__title {
+    font-family: $english2;
+  }
+  &__subtitle {
+    font-family: $english;
+    font-size: rem(19);
+    color: $gray20;
+    font-weight: 300;
+    line-height: rem(33);
+  }
+}
