@@ -68,12 +68,14 @@
     }
   }
 }
+
 .btn-setting {
   @extend %common;
   @include background('ico_setting.svg', center, $grayf8);
 }
 
 @include buttonSize(lg, 60, 22, 44);
+@include buttonSize(lg2, 60, 22, 90);
 @include buttonSize(md, 50, 22, 44);
 @include buttonSize(base, 40, 16, 27);
 @include buttonSize(sm, 35, 16, 17);

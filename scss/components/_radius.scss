@@ -1,5 +1,5 @@
 @use "../abstracts/" as *;
-$radiusGroup: (35);
+$radiusGroup: (35,16);
 
 @each $radius in $radiusGroup {
   .radius-#{$radius} {

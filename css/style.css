@@ -861,6 +861,13 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   letter-spacing: -0.052rem;
 }
 
+.text.md3 {
+  font-size: 1.8rem;
+  color: #202020;
+  font-weight: 300;
+  line-height: 2.6rem;
+}
+
 .align .heading.md {
   margin-bottom: 0;
 }
@@ -949,6 +956,12 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   height: 6rem;
   font-size: 2.2rem;
   padding: 0 4.4rem;
+}
+
+.btn.lg2 {
+  height: 6rem;
+  font-size: 2.2rem;
+  padding: 0 9rem;
 }
 
 .btn.md {
@@ -1068,6 +1081,10 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 
 .radius-35 {
   border-radius: 3.5rem;
+}
+
+.radius-16 {
+  border-radius: 1.6rem;
 }
 
 .profile-header {
@@ -1536,6 +1553,16 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   border-color: #004cff transparent transparent transparent;
 }
 
+.start-list {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18.8rem;
+}
+
+.start-list > button {
+  margin-top: 10.6rem;
+}
+
 .start-bg {
   background: url(../images/logo_bags.svg) no-repeat center;
   width: 13.4rem;
@@ -1547,6 +1574,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 
 .start-text__title {
   font-family: "Raleway", sans-serif;
+  margin-top: 2.4rem;
 }
 
 .start-text__subtitle {
@@ -1555,6 +1583,16 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   color: #202020;
   font-weight: 300;
   line-height: 3.3rem;
+  margin-top: 1.8rem;
+}
+
+.start-bottom {
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.start-bottom p {
+  font-family: "Nunito Sans", sans-serif;
 }
 
 main {
