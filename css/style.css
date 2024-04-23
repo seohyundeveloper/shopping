@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
 /* Reset */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
 html,
 body,
 h1,
@@ -1391,13 +1393,13 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   position: relative;
   display: flex;
   align-items: center;
-  background: #e5ebfc;
+  background: #f8f8f8;
   height: 5.5rem;
   border-radius: 5.5rem;
 }
 
 .phone > button {
-  width: 4.7rem;
+  width: 6.4rem;
 }
 
 .phone input {
@@ -1670,6 +1672,26 @@ main {
   margin: 0 2rem 2.8rem;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.create-account input {
+  font-family: "Poppins", sans-serif;
+}
+
+.create-account {
+  height: 100vh;
+}
+
+.create-account::before {
+  background: url(../images/bg_bubble3.svg) no-repeat top 0 left 0;
+  background-size: 320px 367px;
+  content: "";
+}
+
+.phone__flag {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

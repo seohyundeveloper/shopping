@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+input {
+  .create-account & {
+    font-family: $poppins;
+  }
+}
+
+.create-account{
+  height: 100vh;
+  &::before {
+    @include background('bg_bubble3.svg', top 0 left 0, null, 320px 367px);
+    content: "";      
+  }
+}
+
+.phone__flag{
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+}
