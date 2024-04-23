@@ -1554,22 +1554,30 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 }
 
 .start-list {
+  height: 100vh;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 18.8rem;
 }
 
 .start-list > button {
   margin-top: 10.6rem;
 }
 
-.start-bg {
+.start-list::before {
   background: url(../images/logo_bags.svg) no-repeat center;
+  content: "";
   width: 13.4rem;
   height: 13.4rem;
   border-radius: 100%;
   background-color: #ffffff;
   filter: drop-shadow(0 0.3rem 0.8rem rgba(0, 0, 0, 0.16));
+}
+
+.start-list > a {
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .start-text__title {
@@ -1584,15 +1592,6 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   font-weight: 300;
   line-height: 3.3rem;
   margin-top: 1.8rem;
-}
-
-.start-bottom {
-  gap: 1.6rem;
-  margin-top: 2.4rem;
-}
-
-.start-bottom p {
-  font-family: "Nunito Sans", sans-serif;
 }
 
 main {

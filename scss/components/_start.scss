@@ -2,21 +2,29 @@
 @use "../base/" as *;
 
 .start-list {
+  height: 100vh;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: rem(188);
   > button {
     margin-top: rem(106);
   }
+  &::before {
+    @include background('logo_bags.svg', center);
+    content:"";
+    width: rem(134);
+    height: rem(134);
+    border-radius: 100%;
+    background-color: $white;
+    filter: drop-shadow(0 rem(3) rem(8) rgba(0, 0, 0, 0.16));
+  }
+  > a {
+    gap: rem(16);
+    margin-top: rem(24);
+    font-family: $english;
+  }
 }
-.start-bg {
-  @include background('logo_bags.svg', center);
-  width: rem(134);
-  height: rem(134);
-  border-radius: 100%;
-  background-color: $white;
-  filter: drop-shadow(0 rem(3) rem(8) rgba(0, 0, 0, 0.16));
-}
+
 .start-text{
   &__title {
     font-family: $english2;
@@ -29,13 +37,5 @@
     font-weight: 300;
     line-height: rem(33);
     margin-top: rem(18);
-  }
-}
-
-.start-bottom {
-  gap: rem(16);
-  margin-top: rem(24);
-  p {
-    font-family: $english;
   }
 }
