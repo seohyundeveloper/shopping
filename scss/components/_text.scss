@@ -156,6 +156,14 @@ $textType: (
     "lineHeight": rem(26),
     "letterSpacing": null,
   ),
+  20: (
+    "className": ".heading.xl3",
+    "fontSize": rem(50),
+    "color": $gray20,
+    "fontWeight": 700,
+    "lineHeight": rem(54),
+    "letterSpacing": rem(-0.5),
+  ),
 );
 
 $textLength: list.length($textType);

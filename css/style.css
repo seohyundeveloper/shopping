@@ -870,6 +870,14 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   line-height: 2.6rem;
 }
 
+.heading.xl3 {
+  font-size: 5rem;
+  color: #202020;
+  font-weight: 700;
+  line-height: 5.4rem;
+  letter-spacing: -0.05rem;
+}
+
 .align .heading.md {
   margin-bottom: 0;
 }
@@ -1399,7 +1407,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
 }
 
 .phone > button {
-  width: 6.4rem;
+  width: 4.7rem;
 }
 
 .phone input {
@@ -1674,24 +1682,62 @@ main {
   overflow-y: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .create-account input {
   font-family: "Poppins", sans-serif;
 }
 
 .create-account {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .create-account::before {
-  background: url(../images/bg_bubble3.svg) no-repeat top 0 left 0;
-  background-size: 320px 367px;
-  content: "";
+  position: absolute;
+  top: -15rem;
+  left: -11.5rem;
+  z-index: var(--zindex, 1);
+  content: url(../../images/bg_bubble3.svg);
+  display: block;
+  width: 31.1rem;
+  height: 36.7rem;
+}
+
+.create-account::after {
+  position: absolute;
+  top: 7.1rem;
+  right: -13.7rem;
+  z-index: var(--zindex, 1);
+  content: url(../../images/bg_bubble2.svg);
+  display: block;
+  width: 24.3rem;
+  height: 26.6rem;
+  transform: rotate(156deg);
+}
+
+.create-account > h1 {
+  margin: 14rem 0 0 3rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .phone__flag {
+  display: inline-flex;
+  background: url(../images/ico_arrow_down.svg) no-repeat right 1.5rem center;
+}
+
+.phone .phone__flag {
+  width: 6.4rem;
+}
+
+.account-info {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0.8rem;
+  margin: 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,10 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
+body {
+  overflow-x: hidden;
+}
+
 input {
   .create-account & {
     font-family: $poppins;
@@ -9,14 +13,39 @@ input {
 
 .create-account{
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   &::before {
-    @include background('bg_bubble3.svg', top 0 left 0, null, 320px 367px);
-    content: "";      
+    @include position(a, top, rem(-150), left, rem(-115));
+    content:url(../../images/bg_bubble3.svg);
+    display: block;
+    width: rem(311);
+    height: rem(367);
+  }
+  &::after {
+    @include position(a, top, rem(71), right, rem(-137));
+    content:url(../../images/bg_bubble2.svg);
+    display: block;
+    width:rem(243);
+    height: rem(266);
+    transform: rotate(156deg);
+  }
+  > h1 {
+    margin: rem(140) 0 0 rem(30);
+    font-family: $english2;
   }
 }
 
-.phone__flag{
+.phone__flag {
+  display: inline-flex;
+  @include background('ico_arrow_down.svg', right rem(15) center);
+  .phone & {
+    width:rem(64);
+  }
+}
+.account-info{
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: rem(8);
+  margin: 0 rem(20);
 }
