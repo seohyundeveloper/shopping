@@ -17,12 +17,24 @@
   <meta property="twitter:description" content="">
   <meta property="twitter:image" content="">
   <meta property="twitter:url" content="">
-  <script type="module" src="./js/common.js" defer></script>
+  <script defer>
+    //새로운 페이지 이동하기
+    const goCreate = () => {
+      window.location.href = "https://www.naver.com";
+    }
+
+    const goCancel = () => {
+      alert('입력하신 내용이 모두 삭제되었습니다.');
+    }
+
+  </script>
 </head>
 <body>
   <div class="create-account">
     <h1 class="heading xl3">Create <br />Account</h1>
-    <img src="../images/ico_cameras.svg" alt="사진찍기">
+    <a href="" class="camera-wrapper">
+      <img src="../images/ico_cameras.svg" alt="사진찍기">
+    </a>
     <div class="account-info">
       <input type="email" class="input md" placeholder="Email">
       <input type="password" class="input md show-password" placeholder="Password">
@@ -39,7 +51,7 @@
       </div>
     </div>
     <button class="btn lg3 blue radius-16 btn-done" onclick="goCreate()">Done</button>
-    <p class="text md3 btn-cancel">Cancel</p>
+    <p class="text md3 btn-cancel" onclick="goCancel()">Cancel</p>
   </div>
 </body>
 </html>

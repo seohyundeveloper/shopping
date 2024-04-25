@@ -1739,10 +1739,13 @@ body {
 }
 
 .create-account > img {
-  margin: 5.4rem 0 0 3rem;
   width: 9rem;
   height: 9rem;
   object-fit: contain;
+}
+
+.create-account .camera-wrapper {
+  margin: 5.4rem 0 0 3rem;
 }
 
 .account-info {

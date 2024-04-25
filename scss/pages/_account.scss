@@ -36,10 +36,12 @@ input {
     z-index: 2;
   }
   > img {
-    margin: rem(54) 0 0 rem(30);
     width: rem(90);
     height: rem(90);
     object-fit: contain;
+  }
+  .camera-wrapper {
+    margin: rem(54) 0 0 rem(30);
   }
 }
 

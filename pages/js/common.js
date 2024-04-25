@@ -41,3 +41,7 @@ navItem.forEach((el) => {
   })
 })
 
+ //새로운 페이지 이동하기
+ const goCreate = () => {
+  window.location.href = "https://www.naver.com";
+}
