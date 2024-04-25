@@ -31,11 +31,36 @@ input {
     transform: rotate(156deg);
   }
   > h1 {
-    margin: rem(140) 0 0 rem(30);
+    margin: rem(150) 0 0 rem(30);
     font-family: $english2;
+    z-index: 2;
+  }
+  > img {
+    margin: rem(54) 0 0 rem(30);
+    width: rem(90);
+    height: rem(90);
+    object-fit: contain;
   }
 }
 
+.account-info{
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  margin: rem(32) rem(20) rem(52);
+}
+
+.show-password {
+  position: relative;
+  &::after {
+    @include position(a, top, 50% , right, rem(20));
+    content:url(../../images/show_password.svg);
+    // display: block;
+    // width: rem(19);
+    // height: rem(19);
+  }
+  // @include background('show_password.svg', right rem(20) center, $grayf8);
+}
 .phone__flag {
   display: inline-flex;
   @include background('ico_arrow_down.svg', right rem(15) center);
@@ -43,9 +68,16 @@ input {
     width:rem(64);
   }
 }
-.account-info{
-  display: flex;
-  flex-direction: column;
-  gap: rem(8);
+
+.btn-done {
   margin: 0 rem(20);
+  font-family: $english;
+  font-weight: 300;
+}
+
+.btn-cancel{
+  font-family: $english;
+  text-align: center;
+  margin-top: rem(24); 
+  cursor: pointer;
 }

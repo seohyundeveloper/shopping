@@ -878,6 +878,13 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   letter-spacing: -0.05rem;
 }
 
+.text.md3 {
+  font-size: 1.5rem;
+  color: #202020;
+  font-weight: 300;
+  line-height: 2.6rem;
+}
+
 .align .heading.md {
   margin-bottom: 0;
 }
@@ -972,6 +979,12 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   height: 6rem;
   font-size: 2.2rem;
   padding: 0 9rem;
+}
+
+.btn.lg3 {
+  height: 6rem;
+  font-size: 2.2rem;
+  padding: 0 14.2rem;
 }
 
 .btn.md {
@@ -1720,8 +1733,35 @@ body {
 }
 
 .create-account > h1 {
-  margin: 14rem 0 0 3rem;
+  margin: 15rem 0 0 3rem;
   font-family: "Raleway", sans-serif;
+  z-index: 2;
+}
+
+.create-account > img {
+  margin: 5.4rem 0 0 3rem;
+  width: 9rem;
+  height: 9rem;
+  object-fit: contain;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 3.2rem 2rem 5.2rem;
+}
+
+.show-password {
+  position: relative;
+}
+
+.show-password::after {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  z-index: var(--zindex, 1);
+  content: url(../../images/show_password.svg);
 }
 
 .phone__flag {
@@ -1733,11 +1773,17 @@ body {
   width: 6.4rem;
 }
 
-.account-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+.btn-done {
   margin: 0 2rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+
+.btn-cancel {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  margin-top: 2.4rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

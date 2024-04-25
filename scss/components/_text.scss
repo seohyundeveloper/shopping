@@ -164,6 +164,14 @@ $textType: (
     "lineHeight": rem(54),
     "letterSpacing": rem(-0.5),
   ),
+  21: (
+    "className": ".text.md3",
+    "fontSize": rem(15),
+    "color": $gray20,
+    "fontWeight": 300,
+    "lineHeight": rem(26),
+    "letterSpacing": null,
+  ),
 );
 
 $textLength: list.length($textType);
