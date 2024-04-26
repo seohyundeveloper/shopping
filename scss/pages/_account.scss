@@ -17,14 +17,14 @@ input {
   flex-direction: column;
   &::before {
     @include position(a, top, rem(-150), left, rem(-115));
-    content:url(../../images/bg_bubble3.svg);
+    content:url(../images/bg_bubble3.svg);
     display: block;
     width: rem(311);
     height: rem(367);
   }
   &::after {
     @include position(a, top, rem(71), right, rem(-137));
-    content:url(../../images/bg_bubble2.svg);
+    content:url(../images/bg_bubble2.svg);
     display: block;
     width:rem(243);
     height: rem(266);
@@ -40,9 +40,14 @@ input {
     height: rem(90);
     object-fit: contain;
   }
-  .camera-wrapper {
-    margin: rem(54) 0 0 rem(30);
-  }
+}
+
+.input-file {
+  margin: rem(54) 0 0 rem(30);
+  @include background('ico_cameras.svg', center);
+  width: rem(90);
+  height: rem(90);
+  cursor: pointer;
 }
 
 .account-info{
@@ -56,7 +61,7 @@ input {
   position: relative;
   &::after {
     @include position(a, top, 50% , right, rem(20));
-    content:url(../../images/show_password.svg);
+    content:url(../images/show_password.svg);
     // display: block;
     // width: rem(19);
     // height: rem(19);
