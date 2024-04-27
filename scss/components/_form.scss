@@ -115,3 +115,23 @@
   }
 }
 
+.password {
+  @extend %inputBase;
+  display: inline-flex;
+  background: $grayf8;
+  height: rem(52);
+  border-radius: rem(52);
+  > button {
+    &::before {
+      content:url(../images/show_password.svg);
+    }
+    &.show {
+      &::before {
+        content:'⭕';
+      }
+    }
+  }
+  > input {
+    padding: 0;
+  }
+}

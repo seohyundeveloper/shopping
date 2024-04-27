@@ -58,17 +58,7 @@ input {
   margin: rem(32) rem(20) rem(52);
 }
 
-.show-password {
-  position: relative;
-  &::after {
-    @include position(a, top, 50% , right, rem(20));
-    content:url(../images/show_password.svg);
-    // display: block;
-    // width: rem(19);
-    // height: rem(19);
-  }
-  // @include background('show_password.svg', right rem(20) center, $grayf8);
-}
+
 .phone__flag {
   display: inline-flex;
   @include background('ico_arrow_down.svg', right rem(15) center);

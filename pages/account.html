@@ -17,17 +17,6 @@
   <meta property="twitter:description" content="">
   <meta property="twitter:image" content="">
   <meta property="twitter:url" content="">
-  <script defer>
-    //새로운 페이지 이동하기
-    const goCreate = () => {
-      window.location.href = "https://www.naver.com";
-    }
-
-    const goCancel = () => {
-      alert('입력하신 내용이 모두 삭제되었습니다.');
-    }
-
-  </script>
 </head>
 <body>
   <div class="create-account">
@@ -35,7 +24,10 @@
     <input type="file" id="file_1" class="a11y-hidden" ><label for="file_1" class="input-file"></label>
     <div class="account-info">
       <input type="email" class="input md" placeholder="Email">
-      <input type="password" class="input md show-password" placeholder="Password">
+      <div class="password">
+        <input type="text" class="input hide-password" placeholder="Password">
+        <button class="show-btn"></button>
+      </div>
       <div class="phone">
         <button class="phone__flag">
           <img src="../images/england.svg" alt="">
@@ -51,5 +43,32 @@
     <button class="btn lg3 blue radius-16 btn-done" onclick="goCreate()">Done</button>
     <p class="text md3 btn-cancel" onclick="goCancel()">Cancel</p>
   </div>
+  <!-- <script type="module" src="./js/common.js" defer></script> -->
+  <script defer>
+    //새로운 페이지 이동하기
+    const goCreate = () => {
+      window.location.href = "https://www.naver.com";
+    }
+
+    const goCancel = () => {
+      alert('입력하신 내용이 모두 삭제되었습니다.');
+    }
+
+    //패스워드 보이게 
+    const passwordInput = document.querySelector('.hide-password');
+    const showPasswordBtn = document.querySelector('.show-btn');
+
+    const toggle = (e) => {
+      e.target.classList.toggle('show');
+
+      if(e.target.classList.contains('show')) {
+        passwordInput.setAttribute('type', 'text');
+      } else {
+        passwordInput.setAttribute('type', 'password');
+      }
+    }
+
+    showPasswordBtn.addEventListener('click', toggle);
+  </script>
 </body>
 </html>

@@ -45,3 +45,20 @@ navItem.forEach((el) => {
  const goCreate = () => {
   window.location.href = "https://www.naver.com";
 }
+
+
+//패스워드 보이게 
+const passwordInput = document.querySelector('.hide-password');
+const showPasswordBtn = document.querySelector('.show-btn');
+
+const toggle = (e) => {
+  e.target.classList.toggle('show');
+
+  if(e.target.classList.contains('show')) {
+    passwordInput.setAttribute('type', 'text');
+  } else {
+    passwordInput.setAttribute('type', 'password');
+  }
+}
+
+showPasswordBtn.addEventListener('click', toggle);
