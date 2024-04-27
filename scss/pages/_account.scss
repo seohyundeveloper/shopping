@@ -15,6 +15,7 @@ input {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   &::before {
     @include position(a, top, rem(-150), left, rem(-115));
     content:url(../images/bg_bubble3.svg);
