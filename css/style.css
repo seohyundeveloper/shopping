@@ -886,6 +886,13 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   line-height: 2.6rem;
 }
 
+.text.xl2 {
+  font-size: 1.9rem;
+  color: #202020;
+  font-weight: 300;
+  line-height: 3.5rem;
+}
+
 .align .heading.md {
   margin-bottom: 0;
 }
@@ -1811,6 +1818,46 @@ body {
   text-align: center;
   margin-top: 2.4rem;
   cursor: pointer;
+}
+
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../../images/bg_bubble1.svg), url(../../images/bg_bubble3.svg), url(../../images/bg_bubble2.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top -17rem left -17.6rem, top -10.5rem left -8.2rem, top 26rem right -7rem;
+  background-size: 402px 442px, 373px 432px, 137px 151px;
+}
+
+.login-wrapper .login-title {
+  padding: 39.4rem 0 0 2rem;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+.login-wrapper .login-sub__title {
+  margin: 1rem 0 0 2rem;
+  font-family: "Nunito Sans", sans-serif;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.login-wrapper .login-sub__title::after {
+  content: url(../images/ico_heart_black.svg);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.login-wrapper::after {
+  content: url(../images/bg_bubble3.svg);
+  width: 37.3rem;
+  height: 44.2rem;
+  position: absolute;
+  z-index: -1;
+  bottom: 3.4rem;
+  right: -18.2rem;
+  transform: rotate(-54deg);
 }
 
 /*# sourceMappingURL=style.css.map */

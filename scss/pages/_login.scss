@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../../images/bg_bubble1.svg), 
+                    url(../../images/bg_bubble3.svg),
+                    url(../../images/bg_bubble2.svg),;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top rem(-170) left rem(-176), top rem(-105) left rem(-82), top rem(260) right rem(-70);
+  background-size: 402px 442px, 373px 432px, 137px 151px;  
+  .login {
+    &-title {
+      padding: rem(394) 0 0 rem(20);
+      box-sizing: border-box;
+      font-family: $english2;
+    }
+    &-sub__title {
+      margin: rem(10) 0 0 rem(20);
+      font-family: $english;
+      display: inline-flex;
+      gap: rem(10);
+      &::after {
+        content: url(../images/ico_heart_black.svg);
+        width: rem(15);
+        height: rem(15);
+      }
+    }
+  }
+  &::after {
+    content: url(../images/bg_bubble3.svg);
+    width: rem(373);
+    height: rem(442);
+    position: absolute;
+    z-index:-1;
+    bottom: rem(34);
+    right:rem(-182);
+    transform: rotate(-54deg);
+  }
+}

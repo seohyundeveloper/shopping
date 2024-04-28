@@ -172,6 +172,14 @@ $textType: (
     "lineHeight": rem(26),
     "letterSpacing": null,
   ),
+  22: (
+    "className": ".text.xl2",
+    "fontSize": rem(19),
+    "color": $gray20,
+    "fontWeight": 300,
+    "lineHeight": rem(35),
+    "letterSpacing": null,
+  ),
 );
 
 $textLength: list.length($textType);
