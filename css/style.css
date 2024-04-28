@@ -1770,9 +1770,15 @@ body {
   object-fit: contain;
 }
 
-.input-file {
+.file-wrapper {
   margin: 5.4rem 0 0 3rem;
+  width: 100%;
+  height: 9rem;
+}
+
+.input-file {
   background: url(../images/ico_cameras.svg) no-repeat center;
+  display: inline-flex;
   width: 9rem;
   height: 9rem;
   cursor: pointer;

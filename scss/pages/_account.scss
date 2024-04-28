@@ -43,9 +43,15 @@ input {
   }
 }
 
-.input-file {
+.file-wrapper{
   margin: rem(54) 0 0 rem(30);
+  width: 100%;
+  height: rem(90);
+}
+
+.input-file {
   @include background('ico_cameras.svg', center);
+  display: inline-flex;
   width: rem(90);
   height: rem(90);
   cursor: pointer;
