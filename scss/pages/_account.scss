@@ -48,6 +48,7 @@ input {
   width: 100%;
   height: rem(90);
 }
+
 .input-file {
   @include background('ico_cameras.svg', center);
   display:inline-flex;
