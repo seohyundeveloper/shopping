@@ -1443,6 +1443,11 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   display: block;
 }
 
+.input-file {
+  width: 9rem;
+  height: 9rem;
+}
+
 .password {
   display: inline-flex;
   background: #f8f8f8;

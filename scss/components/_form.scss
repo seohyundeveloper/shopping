@@ -115,6 +115,11 @@
   }
 }
 
+.input-file{
+  width: rem(90);
+  height: rem(90);
+}
+
 .password {
   @extend %inputBase;
   display: inline-flex;
