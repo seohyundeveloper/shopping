@@ -1,6 +1,10 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
+body {
+  overflow: hidden;
+}
+
 input {
   .create-account & {
     font-family: $poppins;

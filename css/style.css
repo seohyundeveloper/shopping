@@ -1727,6 +1727,10 @@ main {
   overflow-y: hidden;
 }
 
+body {
+  overflow: hidden;
+}
+
 .create-account input {
   font-family: "Poppins", sans-serif;
 }
