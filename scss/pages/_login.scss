@@ -6,14 +6,15 @@ body {
 }
 
 .login-wrapper {
-  width: 100%;
   height: 100vh;
   position: relative;
   background-image: url(../images/bg_bubble1.svg), 
                     url(../images/bg_bubble3.svg),
                     url(../images/bg_bubble2.svg);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: top rem(-170) left rem(-176), top rem(-105) left rem(-82), top rem(260) right rem(-70);
+  background-position: top rem(-170) left rem(-176),
+                      top rem(-105) left rem(-82),
+                      top rem(260) right rem(-70);
   background-size: 402px 442px, 373px 432px, 137px 151px;  
   .login {
     &-title {
@@ -39,7 +40,7 @@ body {
     height: rem(442);
     position: absolute;
     z-index:-1;
-    bottom: rem(34);
+    bottom: rem(47);
     right:rem(-182);
     transform: rotate(-54deg);
   }
