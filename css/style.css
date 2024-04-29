@@ -1819,7 +1819,6 @@ body {
 }
 
 .login-wrapper {
-  width: 100%;
   height: 100vh;
   position: relative;
   background-image: url(../images/bg_bubble1.svg), url(../images/bg_bubble3.svg), url(../images/bg_bubble2.svg);
