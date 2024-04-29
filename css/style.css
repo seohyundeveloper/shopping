@@ -1727,10 +1727,6 @@ main {
   overflow-y: hidden;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .create-account input {
   font-family: "Poppins", sans-serif;
 }
@@ -1739,7 +1735,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 .create-account::before {
@@ -1816,6 +1811,10 @@ body {
   text-align: center;
   margin-top: 2.4rem;
   cursor: pointer;
+}
+
+body {
+  overflow: hidden;
 }
 
 .login-wrapper {
