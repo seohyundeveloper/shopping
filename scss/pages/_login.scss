@@ -1,11 +1,8 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
-body {
-  overflow: hidden;
-}
-
 .login-wrapper {
+  overflow: hidden;
   height: 100vh;
   position: relative;
   background-image: url(../images/bg_bubble1.svg), 
