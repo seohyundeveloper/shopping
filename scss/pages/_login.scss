@@ -14,13 +14,17 @@
                       top rem(260) right rem(-70);
   background-size: 402px 442px, 373px 432px, 137px 151px;  
   .login {
+    &-list {
+      margin: rem(394) rem(20);
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+    }
     &-title {
-      padding: rem(394) 0 0 rem(20);
-      box-sizing: border-box;
       font-family: $english2;
     }
     &-sub__title {
-      margin: rem(10) 0 0 rem(20);
+      margin-top: rem(4);
       font-family: $english;
       display: inline-flex;
       gap: rem(10);
@@ -29,6 +33,9 @@
         width: rem(15);
         height: rem(15);
       }
+    }
+    &-email {
+      margin-top: rem(17);
     }
   }
   &::after {
@@ -41,4 +48,8 @@
     right: -48%;
     transform: rotate(-54deg);
   }
+}
+.btn-next{
+  margin-top: rem(36);
+  font-family: $english;
 }

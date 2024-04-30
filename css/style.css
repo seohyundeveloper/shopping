@@ -1824,14 +1824,19 @@ main {
   background-size: 402px 442px, 373px 432px, 137px 151px;
 }
 
+.login-wrapper .login-list {
+  margin: 39.4rem 2rem;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
 .login-wrapper .login-title {
-  padding: 39.4rem 0 0 2rem;
-  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
 
 .login-wrapper .login-sub__title {
-  margin: 1rem 0 0 2rem;
+  margin-top: 0.4rem;
   font-family: "Nunito Sans", sans-serif;
   display: inline-flex;
   gap: 1rem;
@@ -1843,6 +1848,10 @@ main {
   height: 1.5rem;
 }
 
+.login-wrapper .login-email {
+  margin-top: 1.7rem;
+}
+
 .login-wrapper::after {
   content: url(../images/bg_bubble3.svg);
   width: 37.3rem;
@@ -1852,6 +1861,11 @@ main {
   bottom: 5.5%;
   right: -48%;
   transform: rotate(-54deg);
+}
+
+.btn-next {
+  margin-top: 3.6rem;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
