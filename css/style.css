@@ -1437,6 +1437,7 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   border-left: 1px solid #1f1f1f;
   height: 2.3rem;
   background-color: transparent;
+  border-radius: 0;
 }
 
 .phone__list {
@@ -1727,6 +1728,10 @@ main {
   overflow-y: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .create-account input {
   font-family: "Poppins", sans-serif;
 }
@@ -1735,7 +1740,6 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 .create-account::before {
