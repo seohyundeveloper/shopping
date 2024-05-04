@@ -1824,7 +1824,7 @@ body {
   cursor: pointer;
 }
 
-.login-wrapper {
+.bubble-wrapper {
   overflow: hidden;
   height: 100vh;
   position: relative;
@@ -1834,35 +1834,35 @@ body {
   background-size: 402px 442px, 373px 432px, 137px 151px;
 }
 
-.login-wrapper .login-list {
+.bubble-wrapper .login-list {
   padding: 39.4rem 2rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-.login-wrapper .login-title {
+.bubble-wrapper .login-title {
   font-family: "Raleway", sans-serif;
 }
 
-.login-wrapper .login-sub__title {
+.bubble-wrapper .login-sub__title {
   margin-top: 0.4rem;
   font-family: "Nunito Sans", sans-serif;
   display: inline-flex;
   gap: 1rem;
 }
 
-.login-wrapper .login-sub__title::after {
+.bubble-wrapper .login-sub__title::after {
   content: url(../images/ico_heart_black.svg);
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.login-wrapper .login-email {
+.bubble-wrapper .login-email {
   margin-top: 1.7rem;
 }
 
-.login-wrapper::after {
+.bubble-wrapper.login::after {
   content: url(../images/bg_bubble3.svg);
   width: 37.3rem;
   height: 44.2rem;

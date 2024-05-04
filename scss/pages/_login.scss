@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
-.login-wrapper {
+.bubble-wrapper {
   overflow: hidden;
   height: 100vh;
   position: relative;
@@ -38,15 +38,17 @@
       margin-top: rem(17);
     }
   }
-  &::after {
-    content: url(../images/bg_bubble3.svg);
-    width: rem(373);
-    height: rem(442);
-    position: absolute;
-    z-index:-1;
-    bottom: 5.5%;
-    right: -48%;
-    transform: rotate(-54deg);
+  &.login{
+    &::after {
+      content: url(../images/bg_bubble3.svg);
+      width: rem(373);
+      height: rem(442);
+      position: absolute;
+      z-index:-1;
+      bottom: 5.5%;
+      right: -48%;
+      transform: rotate(-54deg);
+    }
   }
 }
 .btn-next{
