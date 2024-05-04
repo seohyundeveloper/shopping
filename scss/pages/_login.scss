@@ -15,8 +15,8 @@
   background-size: 402px 442px, 373px 432px, 137px 151px;  
   .login {
     &-list {
-      margin: rem(394) rem(20);
-      height: inherit;
+      padding: rem(394) rem(20);
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
     }
