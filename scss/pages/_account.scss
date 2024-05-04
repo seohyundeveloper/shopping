@@ -31,7 +31,8 @@ input {
     transform: rotate(156deg);
   }
   > h1 {
-    margin: rem(150) 0 0 rem(30);
+    padding: rem(150) 0 rem(54) rem(30);
+    box-sizing: border-box;
     font-family: $english2;
     z-index: 2;
   }
@@ -43,7 +44,8 @@ input {
 }
 
 .file-wrapper{
-  margin: rem(54) 0 0 rem(30);
+  padding: 0 rem(20);
+  box-sizing: border-box;
   width: 100%;
   height: rem(90);
 }
@@ -51,8 +53,6 @@ input {
 .input-file {
   @include background('ico_cameras.svg', center);
   display:inline-flex;
-  // width: rem(90);
-  // height: rem(90);
   cursor: pointer;
 }
 
@@ -60,7 +60,8 @@ input {
   display: flex;
   flex-direction: column;
   gap: rem(8);
-  margin: rem(32) rem(20) rem(52);
+  padding: rem(32) rem(20) rem(52);
+  box-sizing: border-box;
 }
 
 
@@ -72,8 +73,11 @@ input {
   }
 }
 
+.btn-wrapper {
+  padding: 0 rem(20);
+}
+
 .btn-done {
-  margin: 0 rem(20);
   font-family: $english;
   font-weight: 300;
 }
