@@ -2,9 +2,8 @@
 @use "../base/" as *;
 
 body {
-  //overflow-x: hidden;
-  width: 100vw;
-  position: fixed;
+  // width: 100vw;
+  // position: fixed;
 }
 
 input {
@@ -14,6 +13,8 @@ input {
 }
 
 .create-account{
+  width: 100vw;
+  position: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;

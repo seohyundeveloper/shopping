@@ -1728,16 +1728,13 @@ main {
   overflow-y: hidden;
 }
 
-body {
-  width: 100vw;
-  position: fixed;
-}
-
 .create-account input {
   font-family: "Poppins", sans-serif;
 }
 
 .create-account {
+  width: 100vw;
+  position: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
