@@ -74,6 +74,23 @@
   @include background('ico_setting.svg', center, $grayf8);
 }
 
+.btn-font {
+  font-family: $english;
+  font-weight: 300;
+}
+
+.btn-cancel {
+  width: 100%;
+  margin-top: rem(24);
+  font-family: $english;
+}
+
+.btn-next{
+  margin-top: rem(36);
+  font-family: $english;
+  justify-content: center;
+}
+
 @include buttonSize(lg, 60, 22, 44);
 @include buttonSize(lg2, 60, 22, 90);
 @include buttonSize(lg3, 60, 22, 142);

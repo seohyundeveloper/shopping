@@ -1,11 +1,6 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
-body {
-  // width: 100vw;
-  // position: fixed;
-}
-
 input {
   .create-account & {
     font-family: $poppins;
@@ -77,17 +72,8 @@ input {
 }
 
 .btn-wrapper {
-  padding: 0 rem(20);
-}
-
-.btn-done {
-  font-family: $english;
-  font-weight: 300;
-}
-
-.btn-cancel{
-  font-family: $english;
-  text-align: center;
-  margin-top: rem(24); 
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
