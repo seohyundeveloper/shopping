@@ -1647,10 +1647,15 @@ li:hover .product-like__thumb img, li:hover .product-vertical a img, .product-ve
   filter: drop-shadow(0 0.3rem 0.8rem rgba(0, 0, 0, 0.16));
 }
 
-.start-list > a {
+.move-login {
+  display: flex;
   gap: 1.6rem;
   margin-top: 2.4rem;
   font-family: "Nunito Sans", sans-serif;
+}
+
+.move-login::after {
+  content: url(../images/ico_notice.svg);
 }
 
 .start-text__title {
@@ -1874,7 +1879,7 @@ main {
   height: 44.2rem;
   position: absolute;
   z-index: -1;
-  bottom: 5.5%;
+  bottom: -0.5%;
   right: -48%;
   transform: rotate(-54deg);
 }

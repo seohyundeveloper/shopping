@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
+  <!-- <script type="module" src="../js/common.js" defer></script> -->
   <title>Login</title>
   <meta property="og:type" content="mobile">
   <meta property="og:site_name" content="">
@@ -25,8 +26,26 @@
       <p class="text xl2 login-sub__title">Good to see you back!</p>
       <input type="email" class="input md login-email" placeholder="Email" title="email">
       <button class="btn blue lg3 radius-16 btn-next">Next</button>
-      <button class="text md3 btn-cancel" onclick="goCancel()">Cancel</button>
+      <button class="text md3 btn-cancel open-alert">Cancel</button>
+      <dialog class="dialog alert">
+        <button class="close-btn">X</button>
+        <strong>Login failed!!</strong>
+        <p>Please, input your email accurately!!</p>
+      </dialog>
     </div>
   </div>
+  <script>
+    const dialogAlert = document.querySelector('.dialog.alert');
+    const btnAlert = document.querySelector(".open-alert");
+    btnAlert.addEventListener('click', () =>{
+      dialogAlert.showModal();
+    });
+
+    const closeBtn = document.querySelector('.close-btn');
+
+    closeBtn.addEventListener('click' , () =>{
+      dialogAlert.close();
+    });
+  </script>
 </body>
 </html>
