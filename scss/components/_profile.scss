@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+.profile-lg {
+  @include profile(105,8);
+}
+
 .profile-base {
   @include profile(60,5);
 }

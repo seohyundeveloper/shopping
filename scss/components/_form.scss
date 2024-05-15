@@ -40,6 +40,9 @@
   &.rounded-base {
     border-radius: rem(9);
   }
+  &.square {
+    border-radius: 0;
+  }
   &.blue {
     background-color: $bluee5;
     &::placeholder {

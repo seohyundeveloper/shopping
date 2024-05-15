@@ -1,0 +1,14 @@
+// @use "../abstracts/" as *;
+@use "../base/" as *;
+
+.nunito {
+  font-family: $english;
+}
+
+.raleway {
+  font-family: $english2;
+}
+
+.poppins {
+  font-family: $poppins;
+}
